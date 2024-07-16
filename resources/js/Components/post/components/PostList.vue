@@ -2,8 +2,9 @@
 import { onMounted, ref, computed } from 'vue'
 import { usePost } from '../Composable/usePost'
 import Post from './Post.vue'
+import Comments from './Comments.vue'
 
-const { isLoading, posts, loadPosts, hasError, filter } = usePost()
+const { isLoading, posts, loadPosts, hasError, filter, like } = usePost()
 const search = ref('')
 
 onMounted(() => {
@@ -28,7 +29,14 @@ const resultPosts = computed(() => {
       Loading...
     </div>
     <div v-else class="flex flex-col gap-12 ">
-      <Post v-bind="post" v-for="post in resultPosts" :key="`post-${post.id}`" />
+      <Post @like="like" v-bind="post" v-for="post in resultPosts" :key="`post-${post.id}`">
+        <div>
+          <p class="text-xs text-gray-500 pt-2">Comments</p>
+          <Comments v-if="post.comments" v-model="post.comments">
+          </Comments>
+        </div>
+      </Post>
+
     </div>
   </section>
 </template>

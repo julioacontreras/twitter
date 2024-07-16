@@ -4,7 +4,7 @@ const props = defineProps<Post>()
 </script>
 
 <template>
-  <section class="bg-white rounded-md p-3 w-[600px]">
+  <section>
     <img class="rounded-md" />
     <video v-if="props.video" class="w-full" controls>
       <source :src="props?.video.url" :type="`video/${props?.video.type}`">

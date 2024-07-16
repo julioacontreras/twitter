@@ -1,3 +1,5 @@
+import type { Comment } from './comment'
+
 export type Post = {
   id: number
   title: string
@@ -11,7 +13,8 @@ export type Post = {
     id: number
     url: string
     type: string
-  }
+  },
+  comments?: Comment[]
 }
 
 export type PostForm = {

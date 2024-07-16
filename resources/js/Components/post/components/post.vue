@@ -15,16 +15,28 @@ const isImage = computed(() => {
   return props.image !== null
 })
 
+const emit = defineEmits(['like'])
+
+const like = () => {
+  emit('like', props)
+}
+
 </script>
 
 <template>
-  <div v-if="isVideo">
-    <PostVideo v-bind="props"></PostVideo>
-  </div>
-  <div v-else-if="isImage">
-    <PostImage v-bind="props"></PostImage>
-  </div>
-  <div v-else>
-    <PostText v-bind="props"></PostText>
-  </div>
+  <section class="bg-white rounded-md p-3 w-[600px]">
+    <div v-if="isVideo">
+      <PostVideo v-bind="props"></PostVideo>
+    </div>
+    <div v-else-if="isImage">
+      <PostImage v-bind="props"></PostImage>
+    </div>
+    <div v-else>
+      <PostText v-bind="props"></PostText>
+    </div>
+    <div class="flex justify-end">
+      <button @click="like">{{ props.likeCount }} ❤️</button>
+    </div>
+    <slot></slot>
+  </section>
 </template>

@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Post;
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Comment;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -46,5 +46,12 @@ class DatabaseSeeder extends Seeder
         $post->description = 'Is simply dummy text of the printing and typesetting industry.';
         $post->likeCount = 0;
         $post->save();
+
+        $comment = new Comment();
+        $comment->post_id = Post::first()->id;
+        $comment->user_id = User::first()->id;
+        $comment->text = 'Is simply dummy text of the printing and typesetting industry.';
+        $comment->save();
+
     }
 }

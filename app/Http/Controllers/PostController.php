@@ -42,6 +42,7 @@ class PostController extends Controller
             $item = $post;
             $post->image;
             $post->video;
+            $post->comments;
             array_push($view, $item);
         }
         return $view;

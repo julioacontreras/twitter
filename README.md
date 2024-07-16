@@ -19,6 +19,10 @@ php run dev
 
 ```
 
+Need register user in the link below:
+http://localhost:8000/register
+
+
 ### License
 
 Is privated, can not use to commercial.

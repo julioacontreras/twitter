@@ -23,9 +23,11 @@ class PostController extends Controller
         }
 
         $video_url = $request->input('video_url');
-        if ($video_url) {
+        $video_type = $request->input('video_type');
+        if ($video_url && $video_type) {
             $post->video()->create([
-                'url' => $video_url
+                'url' => $video_url,
+                'type' => $video_type
             ]);
             $post->save();
         }

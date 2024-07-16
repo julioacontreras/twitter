@@ -23,6 +23,10 @@ Route::get('/register', function () {
     ]);
 });
 
+Route::get('/new-post', function () {
+    return Inertia::render('NewPost');
+})->middleware(['auth', 'verified'])->name('new-post');
+
 Route::get('/posts', function () {
     return Inertia::render('Posts');
 })->middleware(['auth', 'verified'])->name('posts');

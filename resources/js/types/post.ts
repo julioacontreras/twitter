@@ -13,3 +13,11 @@ export type Post = {
     type: string
   }
 }
+
+export type PostForm = {
+  title: string
+  description: string
+  image_url?: string
+  video_url?: string
+  video_type?: string
+}

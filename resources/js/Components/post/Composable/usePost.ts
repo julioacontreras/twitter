@@ -1,6 +1,7 @@
 import { ref } from 'vue'
 import { getPosts } from '../../../Services/getPosts'
-import { Post } from '../../../Types/post'
+import { fetchCreatePost } from '../../../Services/createPost'
+import { Post, PostForm } from '../../../Types/post'
 
 export const usePost = () => {
   const posts = ref<Post[]>([])
@@ -26,11 +27,17 @@ export const usePost = () => {
     })
   }
 
+  const createPost = async (form: PostForm) => {
+    await fetchCreatePost(form)
+    loadPosts()
+  }
+
   return {
     posts,
     loadPosts,
+    createPost,
+    filter,
     isLoading,
-    hasError,
-    filter
+    hasError
   }
 }

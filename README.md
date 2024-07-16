@@ -2,7 +2,7 @@
 
 Simple demo using PHP Laravel 
 
-# Get started
+### Get started
 
 ```bash
 # create tables in sqlite
@@ -12,6 +12,6 @@ php artisan migrate
 php artisan serve
 ```
 
-## License
+### License
 
 Is privated, can not use to commercial.

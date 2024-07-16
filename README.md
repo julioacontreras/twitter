@@ -1,6 +1,6 @@
 ## Twitter
 
-Simple demo using PHP Laravel 
+Simple demo using with PHP Laravel + Typescript + Vue3 + TailwindCSS.
 
 ### Get started
 

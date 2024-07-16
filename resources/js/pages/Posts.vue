@@ -1,7 +1,7 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
-import PostList from '@/Components/post/components/post-list.vue';
+import PostList from '@/Components/Post/Components/PostList.vue';
 </script>
 
 <template>

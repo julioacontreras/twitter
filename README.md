@@ -8,8 +8,15 @@ Simple demo using with PHP Laravel + Typescript + Vue3 + TailwindCSS.
 # create tables in sqlite
 php artisan migrate
 
-# run application
+# create registers base
+php artisan db:seed
+
+# run backend
 php artisan serve
+
+# run frontend
+php run dev
+
 ```
 
 ### License

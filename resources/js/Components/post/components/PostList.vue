@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref, computed } from 'vue'
-import { usePost } from '../composable/use-post'
-import Post from './post.vue'
+import { usePost } from '../Composable/usePost'
+import Post from './Post.vue'
 
 const { isLoading, posts, loadPosts, hasError, filter } = usePost()
 const search = ref('')

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import type { Post } from '../../../types/post'
-import PostImage from './post-image.vue'
-import PostVideo from './post-video.vue'
-import PostText from './post-text.vue'
+import type { Post } from '../../../Types/post'
+import PostImage from './PostImage.vue'
+import PostVideo from './PostVideo.vue'
+import PostText from './PostText.vue'
 
 const props = defineProps<Post>()
 

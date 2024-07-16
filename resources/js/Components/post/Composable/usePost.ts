@@ -1,7 +1,6 @@
 import { ref } from 'vue'
-import { getPosts } from '../../../services/get-posts'
-import { Post } from '../../../types/post'
-import { server } from 'typescript'
+import { getPosts } from '../../../Services/getPosts'
+import { Post } from '../../../Types/post'
 
 export const usePost = () => {
   const posts = ref<Post[]>([])

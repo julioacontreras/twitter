@@ -6,7 +6,7 @@ import PostList from '@/Components/Post/Components/PostList.vue';
 
 <template>
     <div
-        class="flex flex-col items-center justify-center bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 py-12">
+        class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 py-12">
 
         <Head title="Posts" />
 

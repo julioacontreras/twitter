@@ -1,0 +1,42 @@
+GET http://127.0.0.1:8000/api/post
+
+###
+
+GET http://127.0.0.1:8000/api/post/1
+
+###
+
+PUT http://127.0.0.1:8000/api/post/like/1
+
+###
+
+POST http://127.0.0.1:8000/api/post
+content-type: application/json
+
+{
+    "title": "sample",
+    "description": "text",
+    "image_url": "https://lh5.googleusercontent.com/proxy/HGDB3qJ35tYUQ82XHeLzU5WjylCReoprkBvxM-2nVsloVCRp6PnS1vtXSmQkZHHsTX6wY5YU7F1_BO-qkBlt64yNLaQDAXmAE_pzhMYg0ZQewcLeua9alEDFWaIyypbg_Fo"
+}
+
+###
+
+POST http://127.0.0.1:8000/api/post
+content-type: application/json
+
+{
+    "title": "sample 2",
+    "description": "text 2"
+}
+
+
+###
+
+POST http://127.0.0.1:8000/api/post
+content-type: application/json
+
+{
+    "title": "video",
+    "description": "text",
+    "video_url": "https://filesamples.com/samples/video/mpeg/sample_1280x720_surfing_with_audio.mpeg"
+}

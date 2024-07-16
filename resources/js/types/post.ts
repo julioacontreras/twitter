@@ -4,11 +4,12 @@ export type Post = {
   description: string
   likeCount: number
   image?: {
-    id: number,
+    id: number
     url: string
   },
   video?: {
-    id: number,
+    id: number
     url: string
+    type: string
   }
 }

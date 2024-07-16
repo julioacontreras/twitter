@@ -18,7 +18,7 @@ onMounted(() => {
     <div v-else-if="isLoading">
       Loading...
     </div>
-    <div v-else>
+    <div v-else class="flex flex-col gap-12 ">
       <Post v-bind="post" v-for="post in posts" :key="`post-${post.id}`" />
     </div>
   </section>

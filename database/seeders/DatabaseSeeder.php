@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +14,37 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'admin',
+            'email' => 'admin@admin.com',
+            'password' => '1234',
         ]);
+
+        $post = new Post();
+        $post->title = 'My image';
+        $post->description = 'Is simply dummy text of the printing and typesetting industry.';
+        $post->likeCount = 0;
+        $post->save();
+        $post->image()->create([
+            'url' => '/plant.webp'
+        ]);
+        $post->save();
+
+        $post = new Post();
+        $post->title = 'My video';
+        $post->description = 'Is simply dummy text of the printing and typesetting industry.';
+        $post->likeCount = 0;
+        $post->save();
+        $post->video()->create([
+            'url' => '/bunny.mp4',
+            'type' => 'mp4'
+        ]);
+        $post->save();
+
+        $post = new Post();
+        $post->title = 'My text';
+        $post->description = 'Is simply dummy text of the printing and typesetting industry.';
+        $post->likeCount = 0;
+        $post->save();
     }
 }

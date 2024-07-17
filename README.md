@@ -22,6 +22,9 @@ php artisan serve
 # open a second terminal and run frontend
 php run dev
 
+# run tests
+./vendor/bin/pest 
+
 ```
 
 Need register user in the link:

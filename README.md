@@ -16,15 +16,15 @@ php artisan migrate
 # create registers base
 php artisan db:seed
 
-# run backend
+# open a terminal and run backend
 php artisan serve
 
-# run frontend
+# open a second terminal and run frontend
 php run dev
 
 ```
 
-Need register user in the link below:
+Need register user in the link:
 http://localhost:8000/register
 
 

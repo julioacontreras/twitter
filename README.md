@@ -5,6 +5,11 @@ Simple demo using with PHP Laravel + Typescript + Vue3 + TailwindCSS.
 ### Get started
 
 ```bash
+
+# rename .env.example to .env and set
+DB_CONNECTION=sqlite
+DB_DATABASE=/your-path/database/database.sqlite
+
 # create tables in sqlite
 php artisan migrate
 
